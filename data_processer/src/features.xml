@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+    <encode describe="用于解析csv的编码格式">utf-8</encode>
+    <!--<separator>&#x0009;是制表符的unicode编码，用\t会补成\\t</separator>-->
+    <separator>&#x0009;</separator>
+    <target_feature>risk_flag</target_feature>
+    <train_features>
+        <train_feature>hn.ca_bxperiod</train_feature>
+        <train_feature>投保人身高</train_feature>
+    </train_features>
+    <features>
+        <feature>
+            <name>e.rowkey</name>
+            <dtype describe="数据类型">str</dtype>
+            <!--<ftype describe="特征类型">useless</ftype>-->
+        </feature>
+        <feature>
+            <!-- 保险年期 -->
+            <name>hn.ca_bxperiod</name>
+            <dtype>str</dtype>
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 终身合同标志 -->
+            <name>hn.ca_cnzs</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 缴费年期 -->
+            <name>hn.ca_jfperiod</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 投保人既往调查标识 -->
+            <name>h.c_pl196_h_investigate_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 投保人既往撤单标记 -->
+            <name>h.c_in072_h_revoked_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 投保人既往复效标记 -->
+            <name>h.c_in073_h_reinforce_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 被保人既往调查标识 -->
+            <name>i.c_pl195_i_investigate_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 12个月内重疾险是否出险 -->
+            <name>i.c_in073_i_cii_one_year_occured_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 客户既往加费标记 -->
+            <name>i.c_in078_i_increase_premium_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- -客户既往特约标记 -->
+            <name>i.c_in075_i_special_clause_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 客户既往退保标记 -->
+            <name>i.c_in068_i_surrendered_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 客户既往撤单标记 -->
+            <name>i.c_in069_i_revoked_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 客户既往失效标记 -->
+            <name>i.c_in070_i_invalid_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 客户既往复效标记 -->
+            <name>i.c_in071_i_reinforce_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 客户既往BMI标记客户既往BMI标记 -->
+            <name>i.c_in076_i_abnormal_bmi_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 客户既往吸烟超过限制标记 -->
+            <name>i.c_in077_i_smoke_overlimit_flag_trace</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>投保人性别</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>投保人异常告知标记</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>被保人性别</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO1</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO2</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO3</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO4</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO5</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO6</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO7</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO8</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO9</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO10</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO11</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO12</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO13</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO14</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO15</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO16</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO17</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO18</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO19</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO20</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO21</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO22</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO23</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO24</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO25</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO26</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO27</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO28</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>NO29</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 缴费方式 -->
+            <name>hn.itrvl_code</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 险种代码 -->
+            <name>hn.pol_code</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 投被保人关系 -->
+            <name>hn.rel_to_hldr</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 主附险标识 -->
+            <name>hn.mr_type</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 销售渠道 -->
+            <name>hn.sales_channel_code</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 二级机构代码 -->
+            <name>c_bs007_city_code_h</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 一级机构代码 -->
+            <name>c_bs009_prov_code_h</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 婚姻状态 -->
+            <name>c_bs017_marriage_stat_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 客户服务部职业分类代码 -->
+            <name>c_bs022_occ_class_dept_code_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 紧急联系人关系 -->
+            <name>c_bs030_sos_relation_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 职业大类代码 -->
+            <name>c_bs031_occ_class_code_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 职业子类代码 -->
+            <name>c_bs032_occ_sub_code_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 职业细类代码 -->
+            <name>c_bs033_occ_code_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 投被保人职业危险等级 -->
+            <name>c_bs035_job_risk_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 收入等级-->
+            <name>income_band_h</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 管理机构号 -->
+            <name>manage_code_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 二级机构代码 -->
+            <name>c_bs007_city_code_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 一级机构代码 -->
+            <name>c_bs009_prov_code_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 婚姻状态 -->
+            <name>c_bs017_marriage_stat_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 客户服务部职业分类代码 -->
+            <name>c_bs022_occ_class_dept_code_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 紧急联系人关系 -->
+            <name>c_bs030_sos_relation_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 职业大类代码 -->
+            <name>c_bs031_occ_class_code_i</name>
+            <dtype>str</dtype>
+            <!--<ftype>useless</ftype> -->
+        </feature>
+        <feature>
+            <!-- 职业子类代码 -->
+            <name>c_bs032_occ_sub_code_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 职业细类代码 -->
+            <name>c_bs033_occ_code_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 投被保人职业危险等级 -->
+            <name>c_bs035_job_risk_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 证件类型 -->
+            <name>id_type_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 被保人收入等级 -->
+            <name>income_band_i</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 管理机构号 -->
+            <name>manage_code_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 信用级别 -->
+            <name>x.s_bs008_credit_level</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 部门代码 -->
+            <name>x.s_bs010_did</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>接入来源 </name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>投保人婚姻状况</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>投保人职业大类代码</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>投保人职业子类代码</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>投保人职业细类代码</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>投保人职业风险等级 </name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>投保人客户证件代码类别</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>被保人婚姻状况</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>被保人异常告知标记</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>被保人职业大类代码</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>被保人职业子类代码</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>被保人职业细类代码</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>被保人职业风险等级 </name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>被保人客户证件代码类别</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <name>被保人黑名单标记</name>
+            <dtype>str</dtype>
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>保单接入来源</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>投保日期所在月份</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 保单号 -->
+            <name>hn.cntr_no</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 满期时间 -->
+            <name>hn.expiry_date</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 保单管理机构 -->
+            <name>hn.mg_branch_no</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 新销售人员机构 -->
+            <name>hn.n_sales_branch_no</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 新销售人员代码 -->
+            <name>hn.n_sales_code</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 保单二级管理机构号 -->
+            <name>hn.p_bs002_city_code</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 保单一级管理机构号 -->
+            <name>hn.p_bs004_prov_code</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 核保标识 -->
+            <name>hn.p_bs022_verfication_mark</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 人工核保 -->
+            <name>hn.p_bs024_udw_result</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 保单营销员pid -->
+            <name>hn.p_pl005_pid</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 保单状态 -->
+            <name>hn.cntr_stat</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 调查标识 -->
+            <name>hn.p_in006_investigate_flag</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>holder_party_id_reverse</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 证件号码 -->
+            <name>id_no_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 证件类型 -->
+            <name>id_type_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 姓名 -->
+            <name>name_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 出生日期 -->
+            <name>birth_h</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>insured_party_id_reverse</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 证件号码 -->
+            <name>id_no_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 姓名 -->
+            <name>name_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 出生日期 -->
+            <name>birth_i</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 客户历史购买保单中最多的产品类型 -->
+            <name>h.c_pl215_most_pol_class2_desc_trace</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 个险长险重疾险标准体标签 -->
+            <name>i.pl_01_02_01_trace </name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 个险长险防癌险标准体标签 -->
+            <name>i.pl_01_02_02_trace</name>
+            <dtype>str</dtype>
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 被保人最近一次理赔的时间 -->
+            <name>i.c_pl300_i_last_claim_date_trace</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 出生日期 -->
+            <name>x.s_bs004_birthday</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 离司时间 -->
+            <name>x.s_bs009_transfer_date</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 身份证号 -->
+            <name>x.s_bs016_personid</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 营销员入司时间 -->
+            <name>x.s_bs028_inour_date</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>e.p_cp037_first_occur_date</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>e.p_cp013_reason_1</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>e.in_force_date</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>合同ID</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>合同号</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>投保单号</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>投保人生日</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>投保人客户证件代码</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>投保人通讯地址</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>投保人邮编</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>被保人生日</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>被保人客户证件代码</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>CNTR_ID</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>APPL_NO</name>
+            <dtype>str</dtype>
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>IPSN_CUST_NO</name>
+            <dtype>str</dtype>
+            <!--<ftype>bin</ftype>-->
+        </feature>
+        <feature>
+            <!-- 机构代码 -->
+            <name>x.s_bs019_bid</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 性别-->
+            <name>sex_h</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 性别 -->
+            <name>sex_i</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>被保人同业公司人身险保额合计</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>IPSN_CUST_NO</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>c_bs022_occ_class_dept_code_i</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <name>c_bs022_occ_class_dept_code_i</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 投保人收入-->
+            <name>income_h</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 被保人收入-->
+            <name>income_i</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>useless</ftype>
+        </feature>
+        <feature>
+            <!-- 性别 -->
+            <name>sex_h</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <name>h.c_in073_h_reinforce_flag_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>bin</ftype>
+        </feature>
+        <feature>
+            <!-- 补偿方式 -->
+            <name>illness.compensate_way </name>
+            <!--<dtype>str</dtype>-->
+            <ftype>cat</ftype>
+        </feature>
+        <feature>
+            <!-- 累计缴费 -->
+            <name>hn.ca_sumprem </name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 当年保费 -->
+            <name>hn.ca_yearprem</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 营销员所售保单数量 -->
+            <name>hn.s_pl001_unitssold</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 营销员所售保单标准体数量 -->
+            <name>hn.s_pl002_standardunitssold</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 营销员所售保单出险数量 -->
+            <name>hn.s_pl003_rescuedtimes</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 营销员所售保单标准体率 -->
+            <name>hn.s_pl005_salesstandardratio</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 销售员两年内出险率 -->
+            <name>hn.s_pl006_salestwoyearsoccurrate</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <name>hn.ca_amount</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 投保人长险有效保单数 -->
+            <name>h.c_pl002_h_l_exp_count_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 投保人保单件数 -->
+            <name>h.c_pl019_h_count_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 投保人健康险保单件数 -->
+            <name>h.c_pl061_h_heal_count_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 投保人自己购买健康险件数 -->
+            <name>h.c_pl062_h_heal_count_self_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 近5年投保近1年退保保单数 -->
+            <name>h.c_pl084_cancel_plcy_lst1y_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 近5年公司解约的保单数 -->
+            <name>h.c_pl096_comp_quit_lst5y_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 最近一次购买保单距今时长 -->
+            <name>h.c_pl003_max_diff_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 最近一次投保保单的保费 -->
+            <name>h.c_pl050_max_std_perm_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 累计实际已交保费 -->
+            <name>h.c_pr001_sum_prem_trace </name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 当前期交保费 -->
+            <name>h.c_pr002_prem_paid_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 购买的有效的健康险寿险长险保单累计保费 -->
+            <name>h.c_pr010_sum_prem_h_heal_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 购买的有效的意外险寿险保单累计保费 -->
+            <name>h.c_pr011_sum_prem_accid_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 被保险人730天内生效保单件数 -->
+            <name>i.c_bs034_i_valid_policy730_count_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 被保人长险有效保单数 -->
+            <name>i.c_pl020_i_l_exp_count_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 被保人保单件数 -->
+            <name>i.c_pl025_i_count_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 被保人健康险保单件数 -->
+            <name>i.c_pl216_i_h_count_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 被保险人180天内生效保单件数 -->
+            <name>i.c_bs038_i_valid_policy180_count_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 被保人近5年累计理赔次数 -->
+            <name>i.c_pl068_i_cpnst_count_lst5y_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 被保人既往理赔次数 -->
+            <name>i.c_pl194_i_num_claims_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 近1年累计理赔次数（结案日期在观察点向前1年之内理赔次数）-->
+            <name>i.c_pl091_total_claim_num_lst1y_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 投保含有寿险和重疾责任险种的次数 -->
+            <name>i.c_in072_i_insure_life_cii_times_trace</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 累计风险保额重疾险（除防癌）累计风险保额防癌险-->
+            <name>i.accu_risk_c_02</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 住院保险给付总金额 -->
+            <name>illness.total_insurance_hospitalized</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 住院总开销 -->
+            <name>illness.total_payment_hospitalized</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 住院次数 -->
+            <name>illness.compensate_times_hospitalized</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 门诊保险给付总金额 -->
+            <name>illness.total_insurance_outpatient</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 门诊总开销 -->
+            <name>illness.total_payment_outpatient</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 门诊次数 -->
+            <name>illness.compensate_times_outpatient</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 服务年限 -->
+            <name>x.s_bs020_seniority</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 综合持续率 -->
+            <name>x.s_bs021_sustainedrate</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 近三年FYC -->
+            <name>x.s_bs022_fyc</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 保单件数 -->
+            <name>x.s_bs023_fycnum </name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <!-- 违规扣分 -->
+            <name>x.s_bs024_illegalpoint</name>
+            <!--<dtype>str</dtype>-->
+            <ftype>con</ftype>
+        </feature>
+        <feature>
+            <name>投保人身高</name>
+            <dtype>float</dtype>
+            <ftype>con</ftype>
+            <na_value>-1</na_value>
+            <fill_na>mean</fill_na>
+        </feature>
+        <feature>
+            <name>投保人体重</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>-0.02</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>投保人BMI</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>-0.02</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>投保人吸烟年数</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>-1</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>投保人每天吸烟支数</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>-1</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>投保人吸烟指数</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>0.02</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>投保人收入</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>-0.02</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature >
+            <name>被保人身高</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>-1</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>被保人体重</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>-1</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>被保人BMI</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>-0.02</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>被保人吸烟年数</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>-1</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>被保人每天吸烟支数</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>-1</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>被保人吸烟指数</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>0.02</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>被保人收入</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>con</ftype>
+            <na_value>-0.02</na_value>
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+        <feature>
+            <name>risk_flag</name>
+            <!--<dtype>float</dtype>-->
+            <ftype>target</ftype>
+            <!--<na_value>-1</na_value>-->
+            <!--<fill_na>mean</fill_na>-->
+        </feature>
+    </features>
+</config>
